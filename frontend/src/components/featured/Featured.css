@@ -1,0 +1,9 @@
+.featured{
+    display:flex;
+    justify-content: center;
+
+}
+
+.featuredcontainer{
+    justify-content: center;
+}

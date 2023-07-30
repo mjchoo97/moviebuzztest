@@ -1,0 +1,51 @@
+.movie{
+    display: flex;
+    justify-content: center;
+
+}
+
+.moviecontainer{
+    display: flex;
+    width: 500px;;
+    height: 50px;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.index{
+    color: black;
+    padding: 5px 20px;
+    font-size: 25px;
+    border: 4px solid #da4f9b;
+    border-radius: 10px;
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+.moviename{
+    color: black;
+    padding: 10px 20px;
+    border: 4px solid #da4f9b;
+    border-radius: 10px;
+    margin-right: 10px;
+    width:300px;
+    font-size: 20px;
+}
+
+.score{
+    color: black;
+    padding: 5px 15px;
+    border: 5px solid #da4f9b;
+    border-radius: 10px;
+    width:30px;
+    justify-content: center;
+    display: flex;
+    font-size: 25px;
+}
+
+.score:hover{
+    background-color: black;
+    color: white;
+}
