@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 
-const BASE_URL =  "http://localhost:8800/api/";
+const BASE_URL =  "https://moviebuzz-api.onrender.com/api/";
 
 const useFetch = (url) =>{
     const [data, setData] =useState([])
