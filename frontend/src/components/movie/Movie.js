@@ -2,7 +2,7 @@ import React from 'react'
 import "./Movie.css"
 
 export const Movie = ({props,index}) => {
-  const {name,score} = props 
+  const {title,score} = props 
   return (
     <div className='movie'>
         <div className='moviecontainer'>
@@ -10,10 +10,10 @@ export const Movie = ({props,index}) => {
             <span>{index+1}</span>
           </div>
           <div className='moviename'>
-          <span>{name}</span>
+          <span>{title}</span>
           </div>
           <div className='score'>
-          <span>{score}</span>    
+          <span>{score.toFixed(1)}</span>    
           </div>         
         </div>
     </div>

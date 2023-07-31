@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import movieRoute from "./routes/movie.js";
 import cors from 'cors';
-// import { MongoClient } from "mongodb";
+
 
 const app = express();
 app.use(cors());
@@ -17,7 +17,7 @@ const port = process.env.PORT ||5000
 //Connect to MongoDB
 const connectDB = async ()=>{
     try {        
-        await mongoose.connect(process.env.MONGODB_URL,{ useNewUrlParser: true, useUnifiedTopology: true });
+        await mongoose.connect(process.env.MONGODB_URL),{dbName: 'moviebuzz'};
         console.log("Connected to MongoDB")        
     } catch (error) {
         throw error;
@@ -35,7 +35,7 @@ mongoose.connection.on("connected",()=>{
 
 //Middlewares
 app.use(express.json());
-app.use("/movie",movieRoute)
+app.use("/api/movie",movieRoute)
 
 app.use((err,req,res,next) =>{
 	const errorStatus = err.status || 500
