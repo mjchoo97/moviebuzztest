@@ -1,0 +1,49 @@
+.skeleton{
+    animation:skeleton-loading 1s linear infinite alternate;
+    opacity: .5;
+
+}
+
+@keyframes skeleton-loading {
+    0%{
+        background-color: hsl(195, 3%, 30%);
+    }
+    100%{
+        background-color: hsla(240, 1%, 24%, 0.877);
+    }
+}
+
+.loadingmain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loadingcontainter{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+.imgskeleton{
+   width: 220px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.textskeleton{
+    width: 750px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+
+}
+
+.textskeleton:last-child{
+    width: 600px;
+
+}

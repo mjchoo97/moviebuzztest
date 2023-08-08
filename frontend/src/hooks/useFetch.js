@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
-import axios from "axios"
+import { axiosInstance } from "../config";
+import axios from "axios";
 
-const BASE_URL =  "https://moviebuzz-api.onrender.com/api/";
+
 
 const useFetch = (url) =>{
     const [data, setData] =useState([])
@@ -13,10 +14,11 @@ const useFetch = (url) =>{
         const fetchData = async ()=>{
             setLoading(true)
             try{
-                const res = await axios.get(BASE_URL +url);
+                const res = await axiosInstance.get(url);
                 setData(res.data);
             } catch (err){
                 setError(err);
+                console.log(err)
             }
             setLoading(false)
         };

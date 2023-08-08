@@ -1,0 +1,28 @@
+.formInput{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.formInput label{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.formInput input{
+    font-size: 15px;
+    width: 300px;
+    height: 30px;
+    color: black;
+    border-radius: 5px;
+    align-items: center;    
+}
+
+::placeholder {
+    font-style: italic;
+    font-size: 1em;
+    color: #222831;
+    background: #FFD369;
+    padding: 5px;
+  }

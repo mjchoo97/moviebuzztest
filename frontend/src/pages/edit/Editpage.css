@@ -1,0 +1,34 @@
+.moviepage{
+    display: flex;
+    justify-content: center;
+}
+
+.moviepagecontainer{
+
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    width:800px;
+   
+}  
+
+.moviepagecontainer button{
+    width: 305px;
+    cursor: pointer;
+    height: 35px;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.moviepagecontainer button:hover{
+    color:white;
+    background-color: #FFD369;
+    font-weight: bold;
+}
+
+.formclass{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

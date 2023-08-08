@@ -6,4 +6,128 @@
 
 .featuredcontainer{
     justify-content: center;
+
 }
+
+.yearheader{
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;    
+}
+
+.rankingsection{
+    width: 900px;
+    display: flex;
+    margin-bottom: 50px;
+    gap: 20px;;
+}
+
+.rank{
+    color: #FFC029;
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid #FFC029;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+
+.rankleft{
+    flex:2;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.rankright{
+    flex:1;
+    display: flex;
+    gap: 10px;
+}
+
+.first{
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
+    gap: 10px;
+    width: 220px;
+    background-color: #363139;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.rankdesc{
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    align-items: center;
+ 
+    
+}
+
+.rankingtitle{
+    color:white;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    font-size: 20px;
+}
+
+.rankingscore{
+    font-weight: bold;
+    color:#FFD369;
+    font-size: 25px;
+}
+
+.featured img{
+    width: 220px;
+    height: 310px;
+    border-radius: 5px;
+
+}
+
+
+.noimage{
+    width: 220px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 25px;
+    color: white;
+    font-style: italic;
+    border: 2px solid white;
+}
+
+.rankright .rank{
+    color: #F31559;
+    border: 3px solid #F31559;
+}
+
+
+.rankright .rankingscore{
+    color: #F31559;
+}
+
+
+@media screen and (max-width:480px){
+    .rankingsection{
+        display: none;
+    }
+
+    .yearheader{
+        justify-content: center;
+    }
+
+    
+}
+
+

@@ -1,0 +1,208 @@
+.featuredimgcontainer{
+    height: 500px;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+}
+
+.wrapper{
+    width:700px;
+    background-color: #171010;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+
+
+
+.fullwarapper{
+    width:700px;
+}
+
+.wrapperimg{
+   display: flex;
+    justify-content: space-around;
+    gap:50px;
+    align-items: center;
+    transition: all 1.5s ease-in-out;
+
+
+}
+
+
+
+.featuredimage img{
+    height: 450px;
+    width: 300px;
+
+}
+
+.descriptionbox{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 20px;
+    width: 400px;
+    
+}
+
+.descriptionbox .year{
+    font-size: 20px;
+}
+
+.top{
+    flex :1;
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.up{
+    display: flex;
+}
+
+.title{
+    padding-right: 20px;
+    width: 200px;
+}
+
+.top .year{
+    padding-right: 20px;
+
+}
+
+.top .score{
+    background-color:#F7B733;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    align-items: center;
+    padding: 0px 2px;
+    height:40px;
+
+    
+}
+
+.top .lowscore{
+    background-color:rgba(255, 0, 0, 0.925);
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    align-items: center;
+    padding: 0px 2px;
+     height:40px;
+}
+
+.bottom{
+    flex: 2;
+    width:300px;
+}
+
+.bottom .description{
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 100px;
+
+}
+
+.up title{
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+
+}
+
+
+
+@media screen and (max-width:480px){
+    .featuredimgcontainer{
+        height: 400px;
+        overflow: hidden;
+        width: 100vw;
+    
+    }
+
+
+
+.featuredimage img{
+    height: 350px;
+    width: 250px;
+
+}
+
+.wrapperimg{
+    gap: 10px;
+    width: 450px;
+
+
+}
+
+
+    .wrapper{
+        gap:500px;
+
+    }
+
+     .descriptionbox{
+        height: 150px;
+        width: 150px;  
+        display: flex;
+        justify-content: center;
+        margin-right: 30px;   
+    }
+
+
+
+    .up{
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+    }
+
+   .scoretext{
+        font-size: 15px;
+    }
+
+    .top .score{
+        width: 30px;
+        height:20px;
+        
+    }
+
+    .top .lowscore{
+        width: 30px;
+        height:20px;
+        
+    }
+
+
+    
+.top .year{
+    font-size: 15px;
+
+}
+
+.bottom{
+    width:100px;
+}
+
+.title{
+    width: 150px;
+}
+
+
+
+    
+}

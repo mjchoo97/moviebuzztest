@@ -1,3 +1,8 @@
 .App{
-  background-color: azure;
+  background-color: rgb(26, 122, 122);
 }
+
+.link{
+  text-decoration: none;
+  color: inherit;
+  }

@@ -18,6 +18,9 @@ const movieSchema = new mongoose.Schema({
     },
     PY_score:{
         type: Number
+    },
+    img:{
+        type: String,
     }
 })
 
