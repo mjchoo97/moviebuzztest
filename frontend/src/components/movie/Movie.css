@@ -89,7 +89,7 @@
     
 .moviecontainer{
 
-    width: 100%;
+    width: 100vw;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -98,15 +98,26 @@
 
 }
 
+.movieleft .index{
+    font-size: 15px;
+    padding:5px 10px;
+
+}
+
 .moviename{
-    width: 150px;
+    width: 160px;
     margin-right: 0px;
     padding: 0;
+    font-size: 16px;
 }
 
 
+.movieright{
+    margin-right: 5px;
+}
 .moviecontainer .score{
-    width: 20px;
+    width: 10px;
+
 }
 
 .score span{

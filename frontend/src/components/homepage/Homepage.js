@@ -11,6 +11,7 @@ const Homepage = () => {
     const [loading, setLoading] =useState(true)
     const [imgMovie,setimgMovie] = useState()
     const [yearSelection,setyearSelection] = useState()
+    const [randomImage,setRandomImage] =useState()
 
 
     useEffect(()=>{
@@ -21,8 +22,10 @@ const Homepage = () => {
                     console.log(movieWithImage)
                     const distinctYear = [...new Set(data.map(item => item.year))];
                     setyearSelection(distinctYear )
-                    setimgMovie([...movieWithImage].sort(() => 0.5 - Math.random()).slice(0,3))
-                    console.log(yearSelection)
+                    setRandomImage([...movieWithImage].sort(() => 0.5 - Math.random()).slice(0, distinctYear.length))
+                    setimgMovie([...movieWithImage].sort(() => 0.5 - Math.random()).slice(0,5))
+                    console.log(randomImage)
+                    console.log( distinctYear.length)
                     setLoading(false)
                 }  
             } catch (err){
@@ -52,9 +55,12 @@ const Homepage = () => {
                 </div>            
                 <div className='category'>
                     <div className="categorycontainer">
-                        {yearSelection.map((year)=>(
+                        {yearSelection.map((year,i)=>(
                             <Link to = {`/featured/${year}`} className='link'>
-                                <div key = {year} className="yearcat">{year}</div>
+                                <div key = {year} className="yearcat">
+                                    <img src = {imgMovie[i].img}/>
+                                    <div className="yeardiv">{year}</div>        
+                                </div>
                             </Link>    
                         ))}
                     </div>                    

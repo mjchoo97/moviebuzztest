@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./Sliderimg.css"
+import { Link } from 'react-router-dom';
 
 const Sliderimg = ({props}) => {
 
@@ -14,7 +15,7 @@ const Sliderimg = ({props}) => {
       })
 
     const handleClick = (prev)=>{
-        setIndex((prev) => prev === 1 ? -1:prev + 1)
+        setIndex((prev) => prev === 1 ? -2 :prev + 1)
         console.log(index)
         console.log(translate)
     }
@@ -32,20 +33,14 @@ const Sliderimg = ({props}) => {
     let translate
     function myFunction(x) {
         if (x.matches) { // If media query matches
-            translate = -450
+            translate = -380
         } else {
-            translate = -700
+            translate = -730
         }
       }
 
-    //   useEffect(()=>{
-    //     if (x.matches) { // If media query matches
-    //         setTranslate(-250)
-    //       } else {
-    //         setTranslate(-700)
-    //       }
+  
 
-    //   },[x])
       var x = window.matchMedia("(max-width: 480px)")
       myFunction(x) // Call listener function at run time
       x.addListener(myFunction) 
@@ -56,9 +51,11 @@ const Sliderimg = ({props}) => {
                 <div className="wrapper" >
                     <div className="wrapperimg" style ={{transform:`translateX(${translate*index}px)`}}>
                     {Movies.map((movie,i)=> (
-                    <>
+                    <div className="someclass">
                     <div className ='featuredimage'>
+                    <Link to = {`/movie/${Movies[i]._id}`}  className='link'>
                         <img src={Movies[i].img} alt="poster" />
+                    </Link> 
                     </div>
                     <div className='descriptionbox'>
                         <div className='top'>
@@ -80,10 +77,10 @@ const Sliderimg = ({props}) => {
                             <div className='description'>
                             {Movies[i].description}
                             </div>
-                            <button onClick = {handleClick}>next</button>           
+                            <button onClick = {handleClick}>NEXT</button>           
                         </div>
                     </div>              
-                    </>
+                    </div>
            
                     ))}
                          </div>

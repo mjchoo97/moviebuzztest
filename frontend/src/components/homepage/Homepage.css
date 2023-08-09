@@ -30,7 +30,10 @@
 
 .category{
 
-    width: 800px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+
 
 }
 
@@ -38,32 +41,68 @@
     color: black;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px 20px;
+    gap: 20px 50px;
     margin-top: 20px;
     justify-content: space-evenly;
 
 }
 
-.yearcat{
-    background-color: #F7B733;
-    width: 100px;
+
+.yearcat {
+    width:200px;
+    aspect-ratio: 2/3;
+    position: relative;
     justify-content: center;
-    display: flex;
-    height: 100px;
-    align-items: center;
-    color: black;
-    font-size: 30px;
-    cursor: pointer;
-    border: 3px solid white;
-    box-shadow: 5px 6px 5px 0px rgba(239,235,224,0.75);
-    -webkit-box-shadow: 5px 6px 5px 0px rgba(239,235,224,0.75);
-    -moz-box-shadow: 5px 6px 5px 0px rgba(239,235,224,0.75);
+    overflow: hidden;
+
+}
+
+.yearcat img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: blur(3px);
+    border-radius: 10px;;
+}
+
+.yeardiv{
+    position: absolute;
+    z-index: 3;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    background-color: #222831;
+    width: 100px;
+    height: 0px;
+
+
+}
+
+.yearcat:hover>img{
+    animation: pulse 800ms ease-in-out;
+    filter: blur(0);
+}
+
+.yearcat:hover>.yeardiv{
+    display: none;
+}
+
+@keyframes pulse{
+    from,to{
+        scale:1;
+    }
+
+    50%{
+        scale:1.08;
+    }
 }
 
 @media screen and (max-width:480px){    
 
     .welcome{
-        font-size: 30px;
+        font-size: 23px;
     }   
     
     .category{
