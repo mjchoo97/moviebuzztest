@@ -10,6 +10,7 @@ import AddMoviePage from './pages/addmovie/AddMoviePage';
 import { Featured } from './components/featured/Featured';
 import Moviedesc from './pages/moviedesc/Moviedesc';
 import EditMoviePage from './pages/edit/Editpage';
+import ErrorPage from './pages/error/ErrorPage';
 
 function App() {
 
@@ -45,6 +46,10 @@ function App() {
         {
           path:"/edit/:_id",
           element: <EditMoviePage/>
+        },
+        {
+          path:"*",
+          element: <ErrorPage/>
         }
       ]
     },

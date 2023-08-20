@@ -15,11 +15,15 @@
     background-color: #4F4557;
     padding: 5px;
     justify-content: space-between;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.212);
+    transition: 0.3s  ease-in-out;
 }
 
 
 .moviecontainer:hover{
     background-color: #86A3B8;
+    transform: scale(1.03);
 }
 
 .movieleft{

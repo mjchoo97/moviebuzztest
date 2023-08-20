@@ -1,0 +1,53 @@
+.errormain{
+
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.errorcontainer{
+    width: 500px;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.upperimg{
+    height: 250px;
+}
+
+.upperimg img{
+    width: 250px;
+    aspect-ratio: 2/3;
+    height: 100%;
+}
+
+.botdesc{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.errtitle{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.botdesc button{
+    margin-top: 20px;
+    border: none;
+    font-size:15px;
+    width: 200px;
+    padding: 10px 0 ;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: burlywood;
+}
+
+.botdesc button:hover{
+    background-color: rgb(219, 94, 94)
+
+}
