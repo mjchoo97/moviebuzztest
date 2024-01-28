@@ -20,7 +20,7 @@ const Homepage = () => {
                 if(data.length > 0){
                     const movieWithImage = [...data].filter((movie)=> { return movie.hasOwnProperty('img')})
                     console.log(movieWithImage)
-                    const distinctYear = [...new Set(data.map(item => item.year))];
+                    const distinctYear = [...new Set(data.map(item => item.year))].sort();
                     setyearSelection(distinctYear )
                     setRandomImage([...movieWithImage].sort(() => 0.5 - Math.random()).slice(0, distinctYear.length))
                     setimgMovie([...movieWithImage].sort(() => 0.5 - Math.random()).slice(0,5))
@@ -37,7 +37,7 @@ const Homepage = () => {
         },[data]);
 
 
-
+        console.log(randomImage)
   return (
 
         <div className ="home">
@@ -58,7 +58,7 @@ const Homepage = () => {
                         {yearSelection.map((year,i)=>(
                             <Link to = {`/featured/${year}`} className='link'>
                                 <div key = {year} className="yearcat">
-                                    <img src = {imgMovie[i].img}/>
+                                    <img src = {randomImage[i].img}/>
                                     <div className="yeardiv">{year}</div>        
                                 </div>
                             </Link>    
